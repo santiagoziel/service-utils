@@ -1,0 +1,22 @@
+{
+  "name": "@santiagoziel/service-utils",
+  "version": "0.1.1",
+  "description": "service utils for my microservice structure",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "registry": "https:npm.pkg.github.com/@santiagoziel"
+  },
+  "author": "Santiago Torres",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17"
+  }
+}
