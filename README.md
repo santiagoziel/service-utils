@@ -16,7 +16,7 @@ const config = new env_config()
 console.log(config.stringOrError("SECRET_KEY"));
 ```
 
-#### Several options to retrieve env variables are available. Check @santiagoziel/service-utils/dist/config.d.ts for more info
+***Several options to retrieve env variables are available. Check[ @santiagoziel/service-utils/dist/config.d.ts](https://github.com/santiagoziel/service-utils/blob/main/src/config.ts) for more info***
 
 ### Resolution response type
 ```typescript
