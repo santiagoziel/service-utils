@@ -2,6 +2,9 @@
 
 ## How To use
 ### Installation
+
+*This is currently a private package, may need permision to be able to install*
+
 ```
 npm install @santiagoziel/service-utils
 ```
