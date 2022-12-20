@@ -1,6 +1,8 @@
 import dotenv from "dotenv"
-dotenv.config()
  export class env_config {
+    constructor() {
+        dotenv.config()
+    }
 /** 
  * Checks if an environment variable is set and if is of type string. Returns the value
  * if set, otherwise returns a default value. Also parses the data type and throws an
