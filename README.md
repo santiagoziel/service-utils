@@ -1,5 +1,4 @@
 # Collection of Reusable TypeScript Classes, Functions, and Types for Common Use Cases
-[![Build and Release Status](https://img.shields.io/badge/build%20and%20release-success-green)](https://github.com/santiagoziel/service-utils)
 ## How To use
 ### Installation
 *only available on the GitHub registry*
