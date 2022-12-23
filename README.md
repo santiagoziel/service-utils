@@ -2,7 +2,7 @@
 
 ## How To use
 ### Installation
-
+*only available on the GitHub registry*
 ```
 npm install @santiagoziel/service-utils
 ```
