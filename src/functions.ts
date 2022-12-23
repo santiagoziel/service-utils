@@ -1,3 +1,11 @@
-export const preload = (callback:(...args: any[]) => any, ...args: any[]): () => any => {
-    return () => callback(args)
+export const preload = (callback: Function, ...args: any[]): () => any => {
+    return () => callback(...args)
 }
+
+const logString = (a:string) => {
+    console.log(a);
+}
+
+const loaded = preload(logString, "Hi!")
+
+loaded()
