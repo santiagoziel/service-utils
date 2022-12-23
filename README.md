@@ -1,4 +1,4 @@
-# Typescript package to configure env variables and Resolution response type
+# Typescript package to configure env variables and Resolution response type and general functions
 
 ## How To use
 ### Installation
@@ -32,4 +32,22 @@ export const register_user_with_password = async (username: string, password: st
     const user: User = await User.create({ where: {username, password} })
     return {state: "succeded", value: user}
 }
+```
+
+### Methods
+#### preload
+
+```typescript
+const takeA = (a:string) => {
+    console.log(a);
+}
+
+const preload = (callback:(...args: any[]) => any, ...args: any[]): () => any => {
+    return () => callback(args)
+}
+
+const loaded = preload(takeA, "hola")
+
+loaded()
+
 ```
