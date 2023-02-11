@@ -26,8 +26,8 @@ console.log(config.stringOrError("SECRET_KEY"));
 
 The `Resolution` type represents the result of an operation that can either succeed or fail. It has two possible states:
 
-- `succeded`: The operation was successful and the result is available in the `value` field.
-- `failed`: The operation failed and the reason for the failure is available in the `reason` field.
+- `succeded`: The operation was successful and the result is available in the `value` field, which is of the first    generic type `A` provided.
+- `failed`: The operation failed and the reason for the failure is available in the `reason` field, which is of the second generic type `B` provided with a default of string.
 
 #### Example
 
