@@ -32,20 +32,24 @@ The `Resolution` type represents the result of an operation that can either succ
 #### Example
 
 ```typescript
-function divide(a: number, b: number): Resolution<number> {
+type Error = {message: string, code: number};
+
+function divide(a: number, b: number): Resolution<number, Error> {
   if (b === 0) {
-    return { state: "failed", reason: "Cannot divide by zero." };
+    return { status: "failed", reason: { message: "Cannot divide by zero.", code: 400 } };
   }
-  return { state: "succeded", value: a / b };
+  return { status: "succeded", value: a / b };
 }
 
 const result = divide(10, 2);
 
-if (result.state === "succeded") {
+if (result.status === "succeded") {
   console.log(result.value); // 5
 } else {
-  console.log(result.reason); // "Cannot divide by zero."
+  console.log(result.reason.message); // "Cannot divide by zero."
+  console.log(result.reason.code); // 400
 }
+
 ```
 
 ### Methods
