@@ -1,6 +1,6 @@
 {
   "name": "@santiagoziel/service-utils",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "service utils for my microservice structure",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
@@ -13,6 +13,7 @@
   "author": "Santiago Torres",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.3.4",
     "dotenv": "^16.0.3",
     "typescript": "^4.9.4"
   },
