@@ -6,7 +6,7 @@ import axios from 'axios';
  * @param args the arguments to be passed to the callback function
  * @returns a new function that calls the callback function with the pre-defined arguments
  */
-export const preload = (callback: Function, ...args: any[]): () => any => {
+export const preload = <A,>(callback: (...args: any[]) => A, ...args: any[]): () => A => {
     return () => callback(...args)
 }
 
