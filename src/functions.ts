@@ -6,9 +6,20 @@ import axios from 'axios';
  * @param args the arguments to be passed to the callback function
  * @returns a new function that calls the callback function with the pre-defined arguments
  */
-export const preload = <A,>(callback: (...args: any[]) => A, ...args: any[]): () => A => {
+export const preload = <A, U extends any[]>(callback: (...args: U) => A, ...args: U): () => A => {
     return () => callback(...args)
 }
+
+/**
+ * Returns a new function with pre-bound initial arguments, inspired by Python's `partial`.
+ * @param func The function to partially apply arguments to.
+ * @param boundArgs The arguments that are pre-bound to the function.
+ * @returns A new function that when called, will invoke `func` with the pre-bound arguments followed by any additional arguments passed to it.
+ */
+const partial = <T, U extends any[], V extends any[]>(func: (...args: [...U, ...V]) => T, ...boundArgs: U): ((...args: V) => T) => {
+ return (...restArgs: V) => func(...boundArgs, ...restArgs);
+}
+
 
 /**
  * Sends a push notification using the Pushover API.
